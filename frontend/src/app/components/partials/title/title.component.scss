@@ -1,0 +1,12 @@
+@import 'colors';
+
+.title-container {
+    margin-top: 1rem;
+    h1 {
+        background-color: $background;
+        color: $accent;
+        padding: 0.2rem;
+        padding-left: 2rem;
+    }
+}
+

@@ -1,0 +1,26 @@
+<div>
+    <app-category></app-category>
+    <app-not-found
+    [visible]="!products || !products.length"
+    notFoundMessage="Kein passendes Produkt gefunden!"
+    ></app-not-found>
+    <ul class="home-component">
+        <li class="product-list" *ngFor="let product of products">
+            <a class="product-anchor" routerLink="/product/{{product.id}}">
+                <ng-template [ngIf]='product.imageUrl.length > 0' [ngIfElse]="noImage">
+                    <img [src]="product.imageUrl" [alt]="product.name"/>
+                </ng-template>
+                <ng-template #noImage>
+                    <img src="/assets/images/image-not-found.jpg" [alt]="product.name"/>
+                </ng-template>
+                <div class="name">{{product.name}}</div>
+                <div class="properties tooltip-top" data-tooltip="Hersteller | Druck Prozess | Filament Typ">
+                    <div class="manufacturer">{{product.manufacturer.name}} | </div>
+                    <div class="printingProcess">{{product.printingProcess.name}} | </div>
+                    <div class="fillamentType">{{product.filamentType.name}}</div>
+                </div>
+                <div class="price">{{product.price | currency}}</div>
+            </a>
+        </li>
+    </ul>
+</div>

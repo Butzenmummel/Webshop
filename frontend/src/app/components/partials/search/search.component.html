@@ -1,0 +1,6 @@
+<div class="search-component">
+    <input #s type="text" placeholder="Shop durchsuchen" 
+    (keyup.enter)="search(s.value)" 
+    [value]="searchTerm"/>
+    <button (click)="search(s.value)">Suche</button>
+</div>

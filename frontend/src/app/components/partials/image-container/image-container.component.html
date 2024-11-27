@@ -1,0 +1,8 @@
+<div class="image-container">
+    <ng-template [ngIf]='product.imageUrl.length > 0' [ngIfElse]="noImage">
+        <img [src]="product.imageUrl" [alt]="product.name"/>
+    </ng-template>
+    <ng-template #noImage>
+        <img src="/assets/images/image-not-found.jpg" [alt]="product.name"/>
+    </ng-template>
+</div>

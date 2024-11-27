@@ -1,0 +1,100 @@
+@import 'colors';
+
+@mixin text-margin{
+  margin-top: 4rem;
+  margin-left: 4rem;
+  color: white;
+  div {
+    margin-left:2rem;
+    padding: 0.5rem;
+  }
+}
+
+.product-page-component{
+    background: $background;
+}
+
+.container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 3rem;
+    > *{
+      min-width: 25rem;
+      max-width: 40rem;
+    }
+  }
+  
+img {
+  border-radius: 3rem;
+  flex: 1 0;
+  object-fit: scale-down;
+  background-color: white;
+  height: 35rem;
+  width: 35rem;
+  margin: 1rem;
+}
+
+  
+.details{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex:1 0;
+  padding: 2rem;
+  color: $text;
+  margin-left: 1rem;
+}
+
+.header{
+  display: flex;
+  justify-content: space-between;
+}
+
+.name{
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.price{
+  font-size: 1.8rem;
+  margin: 2rem 2rem 2rem 0;
+  color: $accent;
+  ::before{
+    content: "Price: ";
+    color: $secondary-color;
+  }
+}
+
+button{
+  color: black;
+  background: $secondary-color;
+  border: none;
+  font-size: 1.2rem;
+  font-weight: bold;
+  padding: 1rem;
+  border-radius: 10rem;
+  outline: none;
+  &:hover{
+    opacity: 0.9;
+    cursor: pointer;
+  }
+}
+
+.description{
+  @include text-margin;
+}
+
+h2 {
+  border-bottom: 2px solid $accent;
+}
+
+.technical-details{
+  @include text-margin;
+  .seperator{
+    border-bottom: 1px solid $accent;
+  }
+}
+
+

@@ -1,0 +1,40 @@
+@import 'colors';
+
+.search-component{
+    display:flex;
+    justify-self: center;
+    margin-top: 0.4rem;
+    margin-bottom: 0.2rem;
+
+    input{
+        border-radius: 10rem 0 0 10rem;
+        border: none;
+        height: 1rem;
+        width: 20rem;
+        background-color: $primary-color;
+        color: $secondary-color;
+        padding: 1.2rem;
+        font-size: 1rem;
+        font-weight: 500;
+        outline: none;
+    }
+    
+    button{
+        color: black;
+        height: 2.4xrem;
+        width: 4rem;
+        font-size: 1rem;
+        border-radius: 0 10rem 10rem 0;
+        border: none;
+        background-color: $secondary-color;
+        color: black;
+        font-weight: bold;
+        opacity: 0.8;
+        outline: none;
+        &:hover{
+            opacity: 1;
+            cursor: pointer;
+        }
+    }
+}
+

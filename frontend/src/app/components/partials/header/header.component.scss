@@ -1,0 +1,69 @@
+@import 'colors';
+
+header{
+    position: sticky; top: 0;
+    background: $background;
+    padding: 0;
+    border-bottom: 2px solid $accent;
+    z-index: 9999;
+    box-shadow: 0 0.1rem 1.5rem darken($secondary-color,20%);
+}
+
+a{
+    color: $accent;
+}
+
+a:hover{
+    background: lighten($background,10%);
+    cursor: pointer;
+}
+
+.container{
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+a.logo{
+    font-weight: bold;
+    padding: 1rem;
+}
+
+ul{
+    display: flex;
+    list-style-type: none;
+    margin: 0;
+}
+
+ul a{
+    padding: 1rem;
+    display: inline-block;
+}
+
+a span{
+    background: $primary-color;
+    color: white;
+    padding: 0.1rem 0.45rem;
+    border-radius: 100rem;
+    font-size: 0.9rem;
+}
+
+.menu-container{
+    position: relative;
+}
+
+.menu{
+    position: absolute;
+    z-index: 1;
+    background: $primary-color;
+    display: none;
+}
+
+.menu-container:hover .menu{
+    display: block;
+}
+
+.menu a{
+    width: 100%;
+    min-width: 8rem;
+}

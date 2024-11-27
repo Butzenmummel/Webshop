@@ -1,0 +1,122 @@
+@import 'colors';
+
+/* Navbar container */
+.category-component {
+    overflow: hidden;
+    background-color: $background;
+    font-family: Arial;
+  }
+  
+  /* Links inside the navbar */
+  .category-component a {
+    float: left;
+    font-size: 16px;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+  }
+  
+  /* The dropdown container */
+  .dropdown {
+    float: left;
+    overflow: hidden;
+  }
+  
+  /* Dropdown button */
+  .dropdown .dropBtn {
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: black;
+    padding: 14px 16px;
+    background-color: $secondary-color;
+    font: inherit; /* Important for vertical align on mobile phones */
+    margin: 0; /* Important for vertical align on mobile phones */
+  }
+  
+  /* Add a background color to navbar links on hover */
+  .category-component a:hover, .dropdown:hover .dropBtn {
+    background-color: lighten($secondary-color,10%);
+  }
+  
+  /* Dropdown content (hidden by default) */
+  .categoryContent {
+    display: none;
+    position: absolute;
+    background-color: $primary-color;
+    width: 100%;
+    left: 0;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  /* Mega Menu header, if needed */
+  .categoryContent .header {
+    background: red;
+    padding: 16px;
+    color: white;
+  }
+  
+  /* Show the dropdown menu on hover */
+  .dropdown:hover .categoryContent {
+    display: block;
+  }
+  
+  /* Create three equal columns that floats next to each other */
+  .column {
+    float: left;
+    width: 33.33%;
+    padding: 10px;
+    background-color: $primary-color;
+    max-height: 40rem;
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+  
+  /* Style links inside the columns */
+  .column a {
+    float: none;
+    color: white;
+    padding: 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
+  }
+  
+  /* Add a background color on hover */
+  .column a:hover {
+    background-color: lighten($primary-color,10%);
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  h3 {
+    color: $accent;
+    border-bottom: 2px solid $accent;
+  }
+
+  /* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

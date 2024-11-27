@@ -1,0 +1,39 @@
+<div class="category-component">
+    <div class="dropdown">
+        <button class="dropBtn">Kategorien
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="categoryContent">
+            <div class="row">
+                <div class="column">
+                    <h3>Hersteller</h3>
+                    <div *ngIf="manufacturers">
+                        <div *ngFor="let manufacturer of manufacturers" >
+                            <a routerLink="/category/manufacturer/id/{{manufacturer.id}}">
+                                {{manufacturer.name}}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="column">
+                    <h3>Filament Typ</h3>
+                    <div *ngIf="filamentTypes">
+                        <div *ngFor="let filamentType of filamentTypes" >
+                            <a routerLink="/category/filamentType/id/{{filamentType.id}}">
+                                {{filamentType.shortName}}
+                            </a>
+                        </div>
+                    </div>
+                    <h3>Druck Prozess</h3>
+                    <div *ngIf="printingProcesses">
+                        <div *ngFor="let printingProcess of printingProcesses" >
+                            <a routerLink="/category/printingProcess/id/{{printingProcess.id}}">
+                                {{printingProcess.name}}
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
